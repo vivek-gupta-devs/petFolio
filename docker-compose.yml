@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pet_registry
+      MYSQL_USER: *****
+      MYSQL_PASSWORD: *****
+    ports:
+      - 3307:3306
+    volumes:
+      - pet-registry-volume:/var/lib/mysql
+
+volumes:
+  pet-registry-volume:
