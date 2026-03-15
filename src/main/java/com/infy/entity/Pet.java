@@ -2,7 +2,15 @@ package com.infy.entity;
 
 import com.infy.enums.Gender;
 import com.infy.enums.PetType;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+
 import lombok.Getter;
 import lombok.Setter;
 
