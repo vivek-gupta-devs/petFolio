@@ -9,12 +9,7 @@ import lombok.Value;
 @Table(name = "owner")
 @Getter
 @Setter
-public class Owner {
-
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    @Id
-    private Long id;
+public abstract class Owner extends Base {
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -38,10 +33,9 @@ public class Owner {
     @Column(name = "email", nullable = false, unique = true)
     private String emailId;
 
-    /**
     @OneToOne(cascade = CascadeType.ALL, optional = false, orphanRemoval = true)
     @JoinColumn(name = "pet_id", referencedColumnName = "id")
     private Pet pet;
-    */
+
 
 }

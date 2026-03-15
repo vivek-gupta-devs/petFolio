@@ -1,4 +1,4 @@
-package com.infy.entity;
+package com.infy.enums;
 
 public enum Gender {
     M,
